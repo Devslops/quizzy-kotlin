@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/explanation_tw"
+        android:layout_width="517dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply6_btn" />
+
+    <Button
+        android:id="@+id/reply1_btn"
+        android:layout_width="280dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="12dp"
+        android:onClick="makeAnswer"
+        android:text="Réponse 1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/reply2_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_tw"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/reply3_btn"
+        android:layout_width="280dp"
+        android:layout_height="71dp"
+        android:onClick="makeAnswer"
+        android:text="Réponse 3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/reply4_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply2_btn" />
+
+    <Button
+        android:id="@+id/reply4_btn"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:onClick="makeAnswer"
+        android:text="Réponse 4"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/reply5_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply3_btn" />
+
+    <Button
+        android:id="@+id/reply6_btn"
+        android:layout_width="281dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:onClick="makeAnswer"
+        android:text="Réponse 6"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply5_btn" />
+
+    <Button
+        android:id="@+id/reply5_btn"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="4dp"
+        android:onClick="makeAnswer"
+        android:text="Réponse 5"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply4_btn" />
+
+    <Button
+        android:id="@+id/reply2_btn"
+        android:layout_width="280dp"
+        android:layout_height="68dp"
+        android:onClick="makeAnswer"
+        android:text="Réponse 2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/reply3_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply1_btn" />
+
+    <TextView
+        android:id="@+id/question_tw"
+        android:layout_width="505dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty_spn" />
+
+    <Button
+        android:id="@+id/go_btn"
+        android:layout_width="156dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="20dp"
+        android:text="GO"
+        app:layout_constraintStart_toEndOf="@+id/nbr_questions_spn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/nbr_questions_spn"
+        android:layout_width="135dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Spinner
+        android:id="@+id/difficulty_spn"
+        android:layout_width="135dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:text="Difficulté"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbr_questions_spn" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="Nombre questions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:text="                            "
+        app:layout_constraintStart_toEndOf="@+id/difficulty_spn"
+        app:layout_constraintTop_toBottomOf="@+id/go_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
